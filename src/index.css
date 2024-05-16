@@ -1,0 +1,146 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+label span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.todo-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+  word-wrap: break-word;
+}
+
+.todo-item.completed {
+  opacity: 0.5;
+}
+
+.todo-item-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.todo-item-buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.delete-button,
+.done-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.done-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.done-button:hover {
+  background-color: #0069d9;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .submit-button,
+  .delete-button,
+  .done-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-item h4 {
+    margin-bottom: 10px;
+  }
+
+  .delete-button {
+    margin-left: 0;
+  }
+}
